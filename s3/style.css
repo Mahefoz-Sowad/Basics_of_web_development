@@ -149,6 +149,13 @@ ol, ul {
     border-top: 4px solid var(--orange);
 }
 
+
+.card:nth-child(4) {
+    border-top: 4px solid var(--rose);
+}
+
+
+
 footer {
     padding: 2rem 0;
     background-color: var(--dark);
