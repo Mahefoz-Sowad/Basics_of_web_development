@@ -1,0 +1,237 @@
+:root {
+    --primary: #e10e49;
+    --light: #ffffff;
+    --dark: #1e1e1e;
+    --blue: #263f6a;
+    --green: #284e36;
+    --orange: #e37222;
+    --rose: #c24d52;
+    --theme: #892ba6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+
+    background-image: url('../pic/bg.JPG');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    margin: 0;
+    height: auto;
+    overflow: auto;
+}
+
+header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* This blur will now properly stay fixed to the top of your screen */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.container {
+    width: min(1300px, 90%);
+    margin: 0 auto;
+}
+
+nav {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.image-container{
+    padding-top: 100px;
+    height: auto;
+    width: auto;
+}
+
+.location-name{
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 30px;
+    color: #f8f8f8;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 350;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
+}
+
+.image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;       
+    padding: 20px 0;
+}
+
+.image-list li {
+    width: 100%;
+}
+
+.image-card {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 500px; /* Adjust height as needed */
+    
+    /* Background Image Settings (Default starting size) */
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+    /* Smooth transitions for the card scaling and background zoom */
+    transition: transform 0.4s ease-in-out, background-size 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Zooms the whole card UP and zooms the background image IN on hover */
+.image-card:hover {
+    transform: scale(1.03);                  /* > 1 increases the whole card's size */
+    background-size: 100%;                   /* Higher percentage zooms the background image in */
+    box-shadow: 0 12px 35px rgba(116, 114, 114, 0.6); /* Lifts the card with a shadow */
+    z-index: 10;                             /* Keeps it on top of neighbors */
+}
+
+.image-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.image-card:hover::after {
+    /* Instead of changing the gradient colors, just lower the opacity to reveal the zooming image */
+    opacity: 0.0; 
+}
+
+/* Text styling placed on top of the image */
+.image-card figcaption {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 30px;
+    width: 100%;
+    text-align: right;
+    transition: font-size 0.4s ease;
+    /* Added offset and blur so the text shadow actually renders */
+    text-shadow: 0 2px 4px #1e1e1e; 
+}
+
+.image-card figcaption:hover {
+    font-size: 1.8rem;
+}
+
+.image-card figcaption a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.image-card figcaption a:hover {
+    color:#e10e49;
+    text-shadow: #1e1e1e;
+}
+
+
+.image-list img {
+    width: 100%;
+    max-width: 650px;       /* Adjusted to fit side-by-side cleanly */
+    height: auto;           
+    display: block;
+    border-radius: 4px;
+}
+
+
+
+/* Responsive design: stacks them back vertically on smaller screens (like phones) */
+@media (max-width: 900px) {
+    .image-card {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        display: none;
+    }
+
+    .locations {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section {
+        min-height: 60vh;
+    }
+
+    .locations-section {
+        margin: 2rem auto; 
+        width: 90%;
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+    }
+
+    .profile {
+        width: 85%;
+        max-width: 300px;
+    }
+}

@@ -262,6 +262,12 @@ ol, ul {
     -webkit-backdrop-filter: blur(2px); /* Safari support */
 }
 
+.locations a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensures the link covers the full card area */
+}
+
 .location {
     padding: 1.2rem;
     border: 1px solid #e5e5e5;
