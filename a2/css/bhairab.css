@@ -133,6 +133,7 @@ nav a:hover {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
+    position: relative;
     
     /* Smooth transitions for the card scaling and background zoom */
     transition: transform 0.4s ease-in-out, background-size 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
@@ -159,7 +160,16 @@ nav a:hover {
     /* Instead of changing the gradient colors, just lower the opacity to reveal the zooming image */
     opacity: 0.0; 
 }
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3; /* Places it above the background gradient so the whole card is clickable */
+}
 
+/* Keeps your text hover color change working when hovering over the card */
+.image-card:hover .link-text {
+    color: var(--primary);
+}
 /* Text styling placed on top of the image */
 .image-card figcaption {
     position: relative;
