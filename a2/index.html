@@ -2,11 +2,15 @@
 <!--
     Centria Edu - Basics of Web Development
 
-    Original author: Ville Heikkiniemi
-    Modified by: Mahefoz Sowad
-    Last modified: 21-Sep-2026
+    Original author: Mahefoz Sowad
 
-    Based on the original course template.
+
+
+    todo:
+
+    fix explore botton
+    add about
+    fix location buttons
 -->
 
 <!DOCTYPE html>
@@ -14,27 +18,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ville Heikkiniemi">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 
-    <title>Centria Edu | Basics of Web Development</title>
+    <title>Locational Photography by Mahefoz</title>
 
     <style></style>
 </head>
 
 <body>
-
-    <header>
+    <header class="site-header">
         <div class="container">
             <nav>
                 <div class="logo">
-                    centria <span>edu</span>
+                    <a href="#"> <img src="pic/logo.png" alt="Website Logo"> </a>
                 </div>
 
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#topics">Topics</a></li>
+                    <!--<li><a href="#">Home</a></li>-->                    
+                    <!--<li><a href="#">Locations</a></li>-->
+
+                    <!-- add about page-->
                     <li><a href="#">About</a></li>
                 </ul>
             </nav>
@@ -42,31 +46,48 @@
     </header>
 
     <main>
-
-        <section class="hero">
+        <section class="welcome-section">
             <div class="container">
-                <div class="hero-content">
+                <div class="welcome-content">
 
-                    <span class="label">Basics of Web Development</span>
+                    <h1>Discover the natural beauty of Bangladesh</h1>
 
-                    <h1>
-                        Learn how the web works.
-                    </h1>
-
-                    <p>
-                        Start from HTML and CSS and gradually build modern,
-                        responsive and interactive web applications.
-                    </p>
-
-                    <a href="#topics" class="button">
-                        Start learning
+                    <a href="#locations" class="button">
+                        Explore
                     </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="locations-section" id="locations">
+            <div class="container">
+
+                <h1>Locations</h1>
+
+                <div class="locations">
+
+                    <article class="location">
+                        <h3>Bhairab</h3>
+                        <p>My Home Town.</p>
+                    </article>
+
+                    <article class="location">
+                        <h3>Dhaka</h3>
+                        <p>Capital Of Bangladesh.</p>
+                    </article>
+                    
+                    <article class="location">
+                        <h3>Sylhet</h3>
+                        <p>The Birthplace of Bangladeshi Cha(Tea).</p>
+                    </article>
+
+                    
 
                 </div>
             </div>
         </section>
 
-        <section class="topics" id="topics">
+        <!--<section class="topics" id="topics">
             <div class="container">
 
                 <h2>What we will learn</h2>
@@ -87,37 +108,17 @@
                             responsive interfaces.
                         </p>
                     </article>
-                    
-                    <article class="card">
-                    <h3>Git Hub</h3>
-                        <p>Learnings:</p>
-                        <ul>
-                        <li>Making New Repos</li>
-                        <li>Commit & Push</li>
-                        <li>GitHub Pages</li>
-                    </ul>
-                    </article>
-
-                    <article class="card">
-                    <h3>Live Server</h3>
-                        <p>Learnings:</p>
-                        <ol>
-                        <li>Live html Page Testing</li>
-                        <li>Local Development</li>
-                        <li>Real Time Page Modifications</li>
-                    </ol>
-                    </article>
-                    
-
                 </div>
             </div>
-        </section>
-
+        </section>-->
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Centria Edu</p>
+            <article class="profile">
+                                    <p><a href = "https://www.facebook.com/Mahefoz.Sowad " class="footer-profile"> Mahefoz Sowad</a></p>
+
+                    </article>
         </div>
     </footer>
 
