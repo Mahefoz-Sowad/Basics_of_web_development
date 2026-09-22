@@ -1,0 +1,227 @@
+:root {
+    --primary: #e10e49;
+    --light: #ffffff;
+    --dark: #1e1e1e;
+    --blue: #263f6a;
+    --green: #284e36;
+    --orange: #e37222;
+    --rose: #c24d52;
+    --theme: #892ba6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow: hidden;
+
+
+/* Replace 'your-image.jpg' with the path to your image */
+background-image: url('../pic/bg.JPG');
+
+/* Prevents the image from repeating like a tile */
+background-repeat: no-repeat; 
+
+/* Stresses and scales the image to cover the entire screen */
+background-size: cover; 
+
+/* Centers the image on the screen */
+background-position: center; 
+
+/* Ensures the background stays fixed in place while scrolling (optional) */
+background-attachment: fixed; 
+
+/* Fallback background color if the image fails to load */
+background-color: #cccccc; 
+
+/* Margin reset */
+margin: 0;
+height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid #e5e5e5;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+    
+    /* This creates the blur effect */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    
+    /* Semi-transparent background color so the blur is visible */
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.container {
+    width: min(1300px, 90%);
+    margin: 0 auto;
+}
+
+nav {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.about-section {
+    margin: 10rem auto;
+    min-height: calc(100vh - 470px); /* Fills the rest of the screen minus the header height */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 1. Aligns the content box to the left */
+    text-align: left;            /* 2. Aligns the text inside to the left */
+    padding-left: 22%;            /* Optional: adds some breathing room from the left edge */
+    background-color: #0000005e;
+    
+}
+
+.about-content {
+    max-width: 800px; /* Fixed from 80px so your text has room to wrap normally */
+    margin: 0;        /* Removed 'auto' to prevent auto-centering */
+    
+}
+
+.about-content h1 {
+    
+    color: #000000;
+
+
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 350;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+    
+}
+
+
+
+.about-content p{
+
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: var(--light);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    padding-top: 5%;
+
+}
+
+
+
+
+footer {
+    color: var(--light);
+}
+
+.footer-profile {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.footer-profile:hover{
+    color: var(--primary);
+}
+
+
+.profile {
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--light);
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-size 0.5s ease;
+background-color: rgba(208, 197, 197, 0.231);
+text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+}
+
+.profile:hover{
+    transform: scale(1.15); 
+    background-color: rgba(118, 111, 111, 0.494);
+
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        display: none;
+    }
+
+    .locations {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section {
+        min-height: 60vh;
+    }
+
+    /* Adjust your left-aligned section to fit mobile screens cleanly */
+    .locations-section {
+        margin: 2rem auto; /* Centers the rectangle on mobile */
+        width: 90%;
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+    }
+
+    .profile {
+        width: 85%;
+        max-width: 300px;
+    }
+}
