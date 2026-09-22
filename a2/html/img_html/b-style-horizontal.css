@@ -21,7 +21,7 @@ body {
     color: var(--dark);
     line-height: 1.6;
 
-    background-image: url('../../pic/bg.JPG');
+    background-image: url('../../pic/bg_blured.jpg');
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 
@@ -29,7 +29,7 @@ body {
     margin: 0;
     height: auto;
     overflow: auto;
-    /* REMOVED backdrop-filter from body so fixed header works correctly */
+    
 
 }
 
