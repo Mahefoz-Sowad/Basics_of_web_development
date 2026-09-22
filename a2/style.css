@@ -24,28 +24,14 @@ body {
     line-height: 1.6;
     overflow: hidden;
 
-
-/* Replace 'your-image.jpg' with the path to your image */
-background-image: url('pic/bg.JPG');
-
-/* Prevents the image from repeating like a tile */
-background-repeat: no-repeat; 
-
-/* Stresses and scales the image to cover the entire screen */
-background-size: cover; 
-
-/* Centers the image on the screen */
-background-position: center; 
-
-/* Ensures the background stays fixed in place while scrolling (optional) */
-background-attachment: fixed; 
-
-/* Fallback background color if the image fails to load */
-background-color: #cccccc; 
-
-/* Margin reset */
-margin: 0;
-height: 100vh;
+    background-image: url('pic/bg.JPG');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-color: #cccccc; 
+    margin: 0;
+    height: 100vh;
 }
 
 header {
@@ -66,7 +52,6 @@ header {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); /* Safari support */
     
-    /* Semi-transparent background color so the blur is visible */
     background-color: rgba(0, 0, 0, 0.4); 
 }
 
