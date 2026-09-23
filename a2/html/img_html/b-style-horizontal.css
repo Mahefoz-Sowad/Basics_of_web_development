@@ -28,7 +28,7 @@ body {
     color: var(--dark);
     line-height: 1.6;
 
-    background-image: url('../../pic/bg_blured.jpg');
+    background-image: url('../../images/bg_blured.jpg');
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 

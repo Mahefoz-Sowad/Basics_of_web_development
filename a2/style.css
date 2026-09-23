@@ -29,7 +29,7 @@ body {
     line-height: 1.6;
     overflow: hidden;
 
-    background-image: url('pic/bg.JPG');
+    background-image: url('images/bg.JPG');
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 
@@ -155,53 +155,7 @@ nav a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 
 }
-/*
-.topics {
-    padding: 5rem 0;
-    color: var(--dark);
-}
 
-.topics h2 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-ol, ul {
-      list-style-position: inside;
-}
-.card {
-    padding: 2rem;
-    background-color: var(--light);
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-}
-
-.card h3 {
-    margin-bottom: 0.8rem;
-}
-
-.card:nth-child(1) {
-    border-top: 4px solid var(--blue);
-}
-
-.card:nth-child(2) {
-    border-top: 4px solid var(--green);
-}
-
-.card:nth-child(3) {
-    border-top: 4px solid var(--orange);
-}
-
-
-.card:nth-child(4) {
-    border-top: 4px solid var(--rose);
-}
-*/
 
 .locations-section {
     max-width: 900;
@@ -288,15 +242,15 @@ ol, ul {
 
 
 .location:nth-child(1) {
-    background-image: url('pic/bhairab.jpg'); 
+    background-image: url('images/bhairab.jpg'); 
 }
 
 .location:nth-child(2) {
-    background-image: url('pic/dhaka.jpg'); 
+    background-image: url('images/dhaka.jpg'); 
 }
 
 .location:nth-child(3) {
-    background-image: url('pic/sylhet.jpg');
+    background-image: url('images/sylhet.jpg');
 }
 
 
