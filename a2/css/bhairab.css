@@ -235,7 +235,7 @@ figcaption h2{
 }
 
 /* Responsive design: stacks them back vertically on smaller screens (like phones) */
-@media (max-width: 200px) {
+@media (max-width: 50px) {
     body {
         background-attachment: scroll; /* Prevents mobile browsers from over-zooming/stretching fixed background */
     }
@@ -246,7 +246,7 @@ figcaption h2{
     }
 }
 
-@media (max-width: 200px) {
+@media (max-width: 50px) {
     nav ul {
         display: none;
     }
