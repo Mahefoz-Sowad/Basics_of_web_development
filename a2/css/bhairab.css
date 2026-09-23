@@ -235,7 +235,7 @@ figcaption h2{
 }
 
 /* Responsive design: stacks them back vertically on smaller screens (like phones) */
-@media (max-width: 900px) {
+@media (max-width: 200px) {
     .image-card {
         flex-direction: column; 
         align-items: center;
@@ -243,7 +243,7 @@ figcaption h2{
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 200px) {
     nav ul {
         display: none;
     }

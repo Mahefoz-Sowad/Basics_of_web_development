@@ -262,7 +262,7 @@ footer {
     background-color: rgba(118, 111, 111, 0.494);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 200px) {
     nav ul {
         display: none;
     }
