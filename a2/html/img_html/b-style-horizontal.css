@@ -125,6 +125,7 @@ nav a:hover {
 }
 
 .description-side {
+    top: 20px;
     flex: 1;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.4); 
