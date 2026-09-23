@@ -147,7 +147,7 @@ nav a:hover {
     height: 500px; 
     
     /* Background Image Settings (Default starting size) */
-    background-size: 120%;
+    background-size: 130%;
     background-position: center;
     background-repeat: no-repeat;
     
@@ -236,6 +236,9 @@ figcaption h2{
 
 /* Responsive design: stacks them back vertically on smaller screens (like phones) */
 @media (max-width: 200px) {
+    body {
+        background-attachment: scroll; /* Prevents mobile browsers from over-zooming/stretching fixed background */
+    }
     .image-card {
         flex-direction: column; 
         align-items: center;
