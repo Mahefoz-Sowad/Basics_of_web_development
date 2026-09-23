@@ -4,7 +4,6 @@
     Original author: Mahefoz Sowad
 */
 
-
 :root {
     --primary: #e10e49;
     --light: #ffffff;
@@ -16,6 +15,8 @@
     margin: 0;
     padding: 0;
 }
+
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -31,8 +32,6 @@ body {
     margin: 0;
     height: auto;
     overflow: auto;
-    
-
 }
 
 header {
@@ -48,6 +47,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 6px 30px;
+    z-index: 1000;
     
     /* This blur will now properly stay fixed to the top of your screen */
     backdrop-filter: blur(5px);
@@ -92,8 +92,7 @@ nav a:hover {
     color: var(--primary);
 }
 
-
-.goback{
+.goback {
     text-align: left;
     padding-top: 90px;
     color: #f8f8f8;
@@ -106,15 +105,15 @@ nav a:hover {
     text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
 }
 
-.goback a{
+.goback a {
     color: #ffffff;
     text-decoration: none;
 }
-.goback :hover{
+
+.goback a:hover {
     color: var(--primary);
     text-decoration: none;
 }
-
 
 .detail-wrapper {
     display: flex;
@@ -128,21 +127,19 @@ nav a:hover {
 .description-side {
     flex: 1;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.4); /* Slightly more opaque so text is easy to read over the image */
+    background-color: rgba(0, 0, 0, 0.4); 
     padding: 30px;
     border-radius: 8px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     
-    /* Forces the description box to sit on top of the image */
     position: relative;
     z-index: 2; 
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     left: 100px;
 }
 
-
-.description-side h2{
+.description-side h2 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 2rem;
     font-weight: 350;
@@ -150,14 +147,14 @@ nav a:hover {
     padding-bottom: 30px;
 }
 
-.description-side h3{
+.description-side h3 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 350;
     text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
 }
 
-.description-side p{
+.description-side p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
@@ -165,8 +162,7 @@ nav a:hover {
     padding-left: 60px;
 }
 
-
-.description-side a{
+.description-side a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
@@ -174,7 +170,7 @@ nav a:hover {
     text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
 }
 
-.description-side a:hover{
+.description-side a:hover {
     color: var(--primary);
 }
 
@@ -185,29 +181,32 @@ nav a:hover {
 }
 
 .detail-img {
-    /* Keeps your preferred large image size */
-    top:60px;
+    top: 60px;
     width: 130%;
     height: auto;
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
-    
-    /* Optional: centers the oversized image a bit better inside its container */
     position: relative;
     left: -15%; 
 }
 
-/* Stacks them vertically on smaller mobile screens */
+/* Responsive design: stacks elements vertically and resets offsets on smaller screens for proper resizing */
 @media (max-width: 900px) {
     .detail-wrapper {
         flex-direction: column;
     }
-}
 
+    .description-side {
+        left: 0;
+        width: 100%;
+    }
 
-/* Responsive design: stacks them back vertically on smaller screens (like phones) */
-@media (max-width: 900px) {
+    .detail-img {
+        left: 0;
+        width: 100%;
+    }
+
     .image-card {
         flex-direction: column; 
         align-items: center;

@@ -15,6 +15,8 @@
     padding: 0;
 }
 
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--light);
@@ -87,7 +89,6 @@ nav a:hover {
 
 .goback{
     text-align: left;
-    
     color: #f8f8f8;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.5rem;
@@ -141,8 +142,7 @@ nav a:hover {
 
 .image-card {
     position: relative;
-    width: 100%;
-    max-width: 900px;
+    width: min(900px, 90%); /* Made fluid to resize smoothly on window scale */
     margin: 0 auto;
     height: 500px; 
     
@@ -155,7 +155,6 @@ nav a:hover {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    position: relative;
     
     /* Smooth transitions for the card scaling and background zoom */
     transition: transform 0.4s ease-in-out, background-size 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
@@ -186,7 +185,6 @@ figcaption h2{
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 3rem;
     font-weight: 200;
-
 }
 
 .card-overlay {
@@ -198,6 +196,7 @@ figcaption h2{
 .image-card:hover .link-text {
     color: var(--primary);
 }
+
 /* Text styling placed on top of the image */
 .image-card figcaption {
     position: relative;
@@ -210,7 +209,6 @@ figcaption h2{
     width: 100%;
     text-align: right;
     transition: font-size 0.4s ease;
-    /* Added offset and blur so the text shadow actually renders */
     text-shadow: 0 2px 4px #1e1e1e; 
 }
 
@@ -228,7 +226,6 @@ figcaption h2{
     text-shadow: #1e1e1e;
 }
 
-
 .image-list img {
     width: 100%;
     max-width: 650px;
@@ -236,8 +233,6 @@ figcaption h2{
     display: block;
     border-radius: 4px;
 }
-
-
 
 /* Responsive design: stacks them back vertically on smaller screens (like phones) */
 @media (max-width: 900px) {
