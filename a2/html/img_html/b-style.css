@@ -120,6 +120,7 @@ nav a:hover {
 }
 
 .description-side {
+    
     flex: 1;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.4);
@@ -128,6 +129,46 @@ nav a:hover {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     
+}
+
+.description-side ul{
+    gap: 2rem;
+}
+
+.description-side h2{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 350;
+    text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
+    padding-bottom: 30px;
+}
+
+.description-side h3{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
+}
+
+.description-side p{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
+    padding-left: 60px;
+}
+
+
+.description-side a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 450;
+    text-shadow: 0 2px 8px rgba(5, 5, 5, 0.7);
+}
+
+.description-side a:hover{
+    color: var(--primary);
 }
 
 .image-side {
