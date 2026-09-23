@@ -48,8 +48,6 @@ header {
     align-items: center;
     padding: 6px 30px;
     z-index: 1000;
-    
-    /* This creates the blur effect */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); /* Safari support */
     
@@ -100,24 +98,22 @@ nav a:hover {
     min-height: calc(100vh - 470px); /* Fills the rest of the screen minus the header height */
     display: flex;
     align-items: center;
-    justify-content: center; /* 1. Aligns the content box to the left */
-    text-align: left;            /* 2. Aligns the text inside to the left */
-    padding-left: 22%;            /* Optional: adds some breathing room from the left edge */
+    justify-content: center; 
+    text-align: left;            
+    padding-left: 22%;            
     background-color: #0000005e;
     
 }
 
 .about-content {
-    max-width: 800px; /* Fixed from 80px so your text has room to wrap normally */
-    margin: 0;        /* Removed 'auto' to prevent auto-centering */
+    max-width: 800px; 
+    margin: 0;       
     
 }
 
 .about-content h1 {
     
     color: #000000;
-
-
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 3.5rem;
     font-weight: 350;

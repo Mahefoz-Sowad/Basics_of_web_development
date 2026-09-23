@@ -144,7 +144,7 @@ nav a:hover {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    height: 500px; /* Adjust height as needed */
+    height: 500px; 
     
     /* Background Image Settings (Default starting size) */
     background-size: 120%;
@@ -163,10 +163,10 @@ nav a:hover {
 
 /* Zooms the whole card UP and zooms the background image IN on hover */
 .image-card:hover {
-    transform: scale(1.03);                  /* > 1 increases the whole card's size */
+    transform: scale(1.10);                  
     background-size: 100%;                   /* Higher percentage zooms the background image in */
-    box-shadow: 0 12px 35px rgba(116, 114, 114, 0.6); /* Lifts the card with a shadow */
-    z-index: 10;                             /* Keeps it on top of neighbors */
+    box-shadow: 0 12px 35px rgba(116, 114, 114, 0.6); 
+    z-index: 10;                             
 }
 
 .image-card::after {
@@ -179,7 +179,6 @@ nav a:hover {
 }
 
 .image-card:hover::after {
-    /* Instead of changing the gradient colors, just lower the opacity to reveal the zooming image */
     opacity: 0.0; 
 }
 
@@ -196,7 +195,6 @@ figcaption h2{
     z-index: 3; /* Places it above the background gradient so the whole card is clickable */
 }
 
-/* Keeps your text hover color change working when hovering over the card */
 .image-card:hover .link-text {
     color: var(--primary);
 }
@@ -233,7 +231,7 @@ figcaption h2{
 
 .image-list img {
     width: 100%;
-    max-width: 650px;       /* Adjusted to fit side-by-side cleanly */
+    max-width: 650px;
     height: auto;           
     display: block;
     border-radius: 4px;
