@@ -149,6 +149,7 @@ nav a:hover {
 
 
 footer {
+    padding: 2rem 0;
     color: var(--light);
 }
 
