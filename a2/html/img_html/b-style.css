@@ -3,7 +3,6 @@
 
     Original author: Mahefoz Sowad
 */
-
 :root {
     --primary: #e10e49;
     --light: #ffffff;
@@ -43,7 +42,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 30px;
     
     /* This blur will now properly stay fixed to the top of your screen */
     backdrop-filter: blur(5px);
