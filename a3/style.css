@@ -320,8 +320,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    
 }
 
 .gallery_images a {
@@ -330,45 +329,117 @@ nav a:hover {
     display: block;
 }
 
-.image {
-    padding: 1.2rem;
-    border: 1px solid #e5e5e5;
-    text-align:end;
-    font-size: 1.5rem;
-    color: var(--light);
+
+
+
+
+
+.image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;       
+    padding: 20px 0;
+}
+
+.image-list li {
+    width: 100%;
+}
+
+.image-card {
+    position: relative;
+    width: min(900px, 90%); 
+    margin: 0 auto;
+    height: 500px; 
+    
     background-size: 130%;
     background-position: center;
     background-repeat: no-repeat;
-    transition: flex 0.4s ease, padding 0.4s ease, font-size 0.4s, min-height 0.4s ease, box-shadow 0.3s ease, background-size 0.8s ease;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    flex: 1; 
-    min-height: 700px;
-}
-
-.image:hover {
-    flex: 2.5; 
-    padding: 2rem; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
     border-radius: 8px;
-    background-size: 100%;
-    min-height: 700px;
-    font-size: 2rem;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+    transition: transform 0.4s ease-in-out, background-size 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-.image:nth-child(1) {
-    background-image: url('images/bhairab.jpg'); 
+/* Zooms the whole card UP and zooms the background image IN on hover */
+.image-card:hover {
+    transform: scale(1.10);                  
+    background-size: 100%;                   /* Higher percentage zooms the background image in */
+    box-shadow: 0 12px 35px rgba(116, 114, 114, 0.6); 
+    z-index: 10;                             
 }
 
-.image:nth-child(2) {
-    background-image: url('images/dhaka.jpg'); 
+.image-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 
-.image:nth-child(3) {
-    background-image: url('images/sylhet.jpg');
+.image-card:hover::after {
+    opacity: 0.0; 
 }
+
+figcaption h2{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3; /* Places it above the background gradient so the whole card is clickable */
+}
+
+.image-card:hover .link-text {
+    color: var(--primary);
+}
+
+.image-card figcaption {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 30px;
+    width: 100%;
+    text-align: right;
+    transition: font-size 0.4s ease;
+    text-shadow: 0 2px 4px #1e1e1e; 
+}
+
+.image-card figcaption:hover {
+    font-size: 1.8rem;
+}
+
+.image-card figcaption a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.image-card figcaption a:hover {
+    color:#e10e49;
+    text-shadow: #1e1e1e;
+}
+
+.image-list img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;           
+    display: block;
+    border-radius: 4px;
+}
+
+
+
+
 
 footer {
     padding: 2rem 0;
@@ -390,7 +461,7 @@ footer {
 }
 
 .profile {
-    width: 100%;       /* Made fluid to prevent overflowing on resize */
+    width: 100%;       
     max-width: 300px;
     padding: 1rem;
     border: 1px solid #e5e5e5;
