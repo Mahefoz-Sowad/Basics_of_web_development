@@ -158,9 +158,15 @@ ol, ul {
     border-top: 4px solid var(--rose);
 }
 
+#bg_img_effect {
 
-
-
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, .3)), 
+    url('images/web-development2.jpg');
+    
+  background-size: cover;
+  background-position: center;
+}
 
 #grayscale-image {
   display: block;
