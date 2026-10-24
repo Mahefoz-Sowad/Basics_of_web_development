@@ -191,7 +191,9 @@ nav a:hover {
     position: relative;
     left: -15%; 
 }
-
+#gi3{
+    padding-top: 100px;
+}
 /* Responsive design: stacks elements vertically and resets offsets on smaller screens for proper resizing */
 @media (max-width: 900px) {
     .detail-wrapper {

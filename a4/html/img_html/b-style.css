@@ -181,7 +181,9 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgb(0, 0, 0);
 }
-
+#gi3{
+    padding-top: 100px;
+}
 /* Responsive design: stacks elements vertically on smaller screens */
 @media (max-width: 900px) {
     .detail-wrapper {
